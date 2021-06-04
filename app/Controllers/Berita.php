@@ -60,4 +60,83 @@ class Berita extends BaseController
 		}
 	}
 
+	public function storeData() {
+		helper('form');
+		if($this->request->isAjax()) {
+
+			$validation =  \Config\Services::validation();
+
+			$valid = $this->validate([
+				'name_news' => [
+					'label' => 'Judul Berita',
+					'rules' => 'required',
+					'errors' => [
+						'required' => '{field} tidak boleh kosong'
+						]
+					],
+					'editor' => [
+						'label' => 'Isi Berita',
+						'rules' => 'required',
+						'errors' => [
+								'required' => '{field} tidak boleh kosong'
+						]
+					],
+
+					'date_news' => [
+						'label' => 'Tanggal Berita',
+						'rules' => 'required',
+						'errors' => [
+								'required' => '{field} tidak boleh kosong'
+						]
+					],
+
+                    'image_news' => [
+						'label' => 'Upload Gambar',
+						'rules' => 'uploaded[image_news]|mime_in[image_news,image/png,image/jpg,image/jpeg]|is_image[image_news]',
+						'errors' => [
+							'uploaded' => '{field} wajib diisi',
+							'mime_in' => 'Harus dalam bentuk gambar'
+						]
+                    ]
+			]);
+
+			if(!$valid) {
+				$msg = [
+					'error' => [
+						'namenews' => $validation->getError('name_news'),
+						'editor' => $validation->getError('editor'),
+						'datenews' => $validation->getError('date_news'),
+						'image_news' => $validation->getError('image_news')
+						]
+					];
+
+					} else {
+						$image = $this->request->getFile('image_news');
+                        $img = $this->request->getVar('name_news');
+                        $image->move('assets/news-image', $img . '.' . $image->getExtension());
+
+						$saveData = [
+							'user_name' => user()->username,
+							'news_title' => $this->request->getVar('name_news'),
+							'news_desc' => $this->request->getVar('editor'),
+							'news_tanggal' => $this->request->getVar('date_news'),
+							'news_bidang' => $this->request->getVar('bidang_news'),
+							'news_image' => './assets/news-image/' . $image->getName()
+							
+						];
+
+						$news = new BeritaModel;
+
+						$news->insert($saveData);
+
+						$msg = [
+							'sukses' => 'Data news berhasil tersimpan'
+						];
+					}
+
+					echo json_encode($msg);
+			} else {
+				exit("Gagal input data");
+			}
+		}
 }

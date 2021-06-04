@@ -1,3 +1,4 @@
+
 <!-- Modal -->
 <div class="modal fade" id="berita_tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" >
@@ -14,35 +15,33 @@
 
         <div class="modal-body">
             <div class="form-group row">
-                <label for="name_poster" class="col-sm-3 col-form-label">Judul Berita</label>
-                <div class="col-sm-5">
-                <input type="text" class="form-control" id="name_poster" name="name_poster">
-                <!-- <div class="invalid-feedback errorNamaposter"></div> -->
+                <label for="name_news" class="col-sm-3 col-form-label">Judul Berita</label>
+                <div class="col-sm-9">
+                <input type="text" class="form-control" id="name_news" name="name_news">
+                <div class="invalid-feedback errorNewstitle"></div>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="name_poster" class="col-sm-3 col-form-label">Isi Berita</label>
-                <div class="col-sm-8">
-                <div id="editor">
+                <div class="col-sm-9">
                     <textarea name="editor" id="editor" cols="30" rows="10" > </textarea>
-                </div>
-                <!-- <div class="invalid-feedback errorNamaposter"></div> -->
+                    <!-- <div class="invalid-feedback errorNewsdesc"></div> -->
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="date_poster" class="col-sm-3 col-form-label">Tanggal</label>
                 <div class="col-sm-3">
-                <input type="date" class="form-control" id="date_poster" name="date_poster">
-                <!-- <div class="invalid-feedback errorDatePoster"></div> -->
+                <input type="date" class="form-control" id="date_news" name="date_news">
+                <div class="invalid-feedback errorNewsdate"></div>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="date_poster" class="col-sm-3 col-form-label">Bidang</label>
                 <div class="col-sm-3">
-                    <select class="form-control" id="exampleFormControlSelect1" name="bidang">
+                    <select class="form-control" id="bidang_news" name="bidang_news">
                         <?php foreach($data_bidang as $bidang)  : ?>
                             <option value="<?= $bidang['id']; ?>">
                                 <?= $bidang['bidang_name']; ?>
@@ -55,8 +54,8 @@
             <div class="form-group row">
                 <label for="image_poster" class="col-sm-3 col-form-label">Gambar</label>
                 <div class="col-sm-5">
-                <input class="form-control" type="file" id="image_poster" name="image_poster">
-                <!-- <div class="invalid-feedback errorImagePoster"></div> -->
+                <input class="form-control" type="file" id="image_news" name="image_news">
+                <div class="invalid-feedback errorNewsimage"></div>
                 </div>
             </div>
         </div>
@@ -72,24 +71,17 @@
     </div>
 </div>
 
+<script src="<?= base_url('ckeditor/ckeditor.js') ?>"></script>
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
 <script>
 
-ClassicEditor
-    .create(document.querySelector('#editor'))
-    .then(editor => {
-        console.log(editor);
-    })
-    .catch(error => {
-        console.error(error);
-    });
+CKEDITOR.replace('editor');
 
-
-console.log("TES A")
+console.log("Berita Input")
 $(document).ready(function() {
     $('.btnUpload').click(function(e) {
     e.preventDefault();
@@ -99,7 +91,7 @@ $(document).ready(function() {
 
     $.ajax({
             type: "post",
-            url: "<?= site_url('b_poster/storeData') ?>",
+            url: "<?= site_url('berita/storeData') ?>",
             data: data,
             enctype : 'multipart/form-data',
             processData : false,
@@ -116,39 +108,49 @@ $(document).ready(function() {
             },
             success : function (response) {
                 if(response.error) {
-                    if(response.error.namaposter) {
-                        $('#name_poster').addClass('is-invalid');
-                        $('.errorNamaposter').html(response.error.namaposter);
+                    if(response.error.namenews) {
+                        $('#name_news').addClass('is-invalid');
+                        $('.errorNewstitle').html(response.error.namenews);
                     } else {
-                        $('#name_poster').removeClass('is-invalid');
-                        $('.errorNamaposter').html('');
+                        $('#name_news').removeClass('is-invalid');
+                        $('.errorNewstitle').html('');
                     }
 
-                    if(response.error.dateposter) {
-                        $('#date_poster').addClass('is-invalid');
-                        $('.errorDatePoster').html(response.error.dateposter);
+                    if(response.error.editor) {
+                        $('#editor').addClass('is-invalid');
+                        $('.errorNewsdesc').html(response.error.editor);
                     } else {
-                        $('#date_poster').removeClass('is-invalid');
-                        $('.errorDatePoster').html('');
+                        $('#editor').removeClass('is-invalid');
+                        $('.errorNewsdesc').html('');
                     }
 
-                    if(response.error.image_poster) {
-                        $('#image_poster').addClass('is-invalid');
-                        $('.errorImagePoster').html(response.error.image_poster);
+                    if(response.error.datenews) {
+                        $('#date_news').addClass('is-invalid');
+                        $('.errorNewsdate').html(response.error.datenews);
                     } else {
-                        $('#image_poster').removeClass('is-invalid');
-                        $('.errorImagePoster').html('');
+                        $('#date_news').removeClass('is-invalid');
+                        $('.errorNewsdate').html('');
+                    }
+
+                    if(response.error.image_news) {
+                        $('#image_news').addClass('is-invalid');
+                        $('.errorNewsimage').html(response.error.image_news);
+                    } else {
+                        $('#image_news').removeClass('is-invalid');
+                        $('.errorNewsimage').html('');
                     }
                 } else {
+                    console.log("Akhir")
                     Swal.fire({
                         icon: 'success',
                         title: 'Berhasil',
                         text: response.sukses,
                     })
+                    
         
-                    $('#poster_tambah').modal('hide');
+                    $('#berita_tambah').modal('hide');
                     console.log("Sukses")
-                    dataPoster();
+                    dataBerita();
                 }
             },
             error: function(xhr, ajaxOptions, thrownError) {

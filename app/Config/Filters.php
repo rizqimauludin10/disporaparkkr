@@ -35,7 +35,8 @@ class Filters extends BaseConfig
 		'before' => [
 			// 'honeypot',
 			// 'csrf',
-			'login'
+			//Semua halaman harus login dulu
+			//'login'
 		],
 		'after'  => [
 			'toolbar',

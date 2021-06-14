@@ -3832,6 +3832,23 @@ img{
 	background-color:#e1a122;
 }
 
+.services-detail-section .lower-content h3{
+	position:relative;
+	color:#00204c;
+	padding-bottom:20px;
+	text-transform:uppercase;
+}
+
+.services-detail-section .lower-content h3:before{
+	position:absolute;
+	content:'';
+	left: 45%;
+	bottom:0px;
+	width:120px;
+	height:2px;
+	background-color:#e1a122;
+}
+
 .services-detail-section .lower-content p{
 	position:relative;
 	color:#575d6e;

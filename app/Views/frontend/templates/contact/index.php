@@ -75,7 +75,7 @@
 						<h5>Email</h5>
 						<ul class="info-list">
 							<li><a href="mailto:disporaparkkr@gmail.com">disporaparkkr@gmail.com</a></li>
-							<li><a href="mailto:rizqimauludin10@gmail.com">rizqimauludin10@gmail.com</a></li>
+							<li><a href="mailto:rizqimauludin10@gmail.com">pariwisatakkr@gmail.com</a></li>
 						</ul>
 					</div>
 				</div>

@@ -21,7 +21,7 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                    <figure class="image-box clearfix titlt" data-tilt data-tilt-max="4"><img src="<?= base_url()?>/frontend/images/resource/recruitment-1.png" alt=""></figure>
+                    <figure class="image-box clearfix titlt" data-tilt data-tilt-max="4"><img src="<?= base_url()?>/frontend/images/resource/sambutan.png" alt=""></figure>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                     <div id="content_block_4">
@@ -33,10 +33,10 @@
                             <div class="inner-box">
                                 <div class="single-item wow fadeInRight animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                                     <div class="inner">
-                                        <figure class="icon-box"><img src="<?= base_url()?>/frontend/images/icons/icon-7.png" alt=""></figure>
+                                        <!-- <figure class="icon-box"><img src="<?= base_url()?>/frontend/images/icons/icon-7.png" alt=""></figure> -->
                                         <i>Assalamu’alaikum Warahmatullahi Wabarokatuh</i><br><br>
-                                        <p>Puji Syukur kami Panjatkan Kehadirat Allah SWT, Tuhan Yang Maha Esa, karena atas Petunjuk dan Hidayah-Nya telah mengantarkan Dinas Komunikasi dan Informatika ini menjadi sebuah Institusi yang semakin eksis sesuai dengan visi dan misi Kabupaten Kubu Raya “Terwujudnya Kabupaten Kubu Raya yang Bahagia, Bermartabat, Terdepan, Berkualitas dan Religius” menghadapi tantangan zaman, terutama dalam penyelenggaraan pemerintahan yang Good Governance dan siap menjamin transparansi, efisiensi serta efektif...</p>
-                                        <h4><a href="family_law.html">Baca Selengkapnya<i class="flaticon-right-arrow"></i></a></h4>
+                                        <p>Puji Syukur kami Panjatkan Kehadirat Allah SWT, Tuhan Yang Maha Esa, karena atas Petunjuk dan Hidayah-Nya telah mengantarkan Dinas Kepemudaan Olahraga dan Pariwisata ini menjadi sebuah Institusi yang semakin eksis sesuai dengan visi dan misi Kabupaten Kubu Raya “Terwujudnya Kabupaten Kubu Raya yang Bahagia, Bermartabat, Terdepan, Berkualitas dan Religius” menghadapi tantangan zaman, terutama dalam penyelenggaraan pemerintahan yang Good Governance dan siap menjamin transparansi, efisiensi serta efektif...</p>
+                                        <h4><a href="<?= base_url() ?>/sambutan-kadis">Baca Selengkapnya<i class="flaticon-right-arrow"></i></a></h4>
                                     </div>
                                 </div>
                             </div>
@@ -141,13 +141,13 @@
     </section>
     <!-- End of Berita -->
 
-    <!-- None -->
+    <!-- Penghargaan -->
     <section class="project-style-two">
         <div class="outer-container">
             
             <div class="sec-title centered">
-                <h2>Our Case Studies</h2>
-                <div class="text">Long established fact that a reader will be distracted by the <br />readable content of a page.</div>
+                <h2>Prestasi</h2>
+                <div class="text">Prestasi dan penghargaan yang telah diraih oleh <br/>Disporapar Kubu Raya</div>
             </div>
             
             <div class="four-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
@@ -235,10 +235,10 @@
                     <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
                         <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="content">
-                                <div class="icon"><span class="flaticon-briefcase"></span></div>
+                                <div class="icon"><span class="flaticon-user"></span></div>
                                 <div>
                                     <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="3000" data-stop="2">0</span><sup>org</sup>
+                                        <span class="count-text" data-speed="3000" data-stop="2">1</span><sup>org</sup>
                                     </div>
                                     <h4>Hari ini</h4>
                                     <div class="text">Desire that they cannot foresee <br> the pain and trouble.</div>
@@ -250,7 +250,7 @@
                     <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
                         <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="content">
-                                <div class="icon"><span class="flaticon-balance"></span></div>
+                                <div class="icon"><span class="flaticon-user"></span></div>
                                 <div>
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="3000" data-stop="100">0</span><sup>org</sup>
@@ -265,7 +265,7 @@
                     <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
                         <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="content">
-                                <div class="icon"><span class="flaticon-trophy-2"></span></div>
+                                <div class="icon"><span class="flaticon-user"></span></div>
                                 <div>
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="3000" data-stop="350">0</span><sup>org</sup>
@@ -285,9 +285,9 @@
 	<section class="testimonial-section" style="background-image: url(frontend/images/background/pattern-3.png)">
 		<div class="auto-container">
 			<!-- Sec Title -->
-			<div class="sec-title centered">
+			<!-- <div class="sec-title centered">
 				<h2>Testimoni</h2>
-			</div>
+			</div> -->
 			<div class="inner-container">
 				<div class="single-item-carousel owl-carousel owl-theme">
 					
@@ -297,35 +297,100 @@
 							<div class="author-image">
 								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
 							</div>
-							<span class="quote-icon flaticon-quote-1"></span>
-							<div class="text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil rentoa molestiae conseruatur vela illum qui dolorem eum fugiat ruo voluetas nulla ariatur minima veniam.</div>
-							<div class="name">Muda Mahendrawan</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Iping Hindrawati, ST, MH</div>
+							<div class="text">Kepala Dinas Kepemudaan Olahraga dan Pariwisata Kubu Raya</div>
 						</div>
 					</div>
-					
-					<!-- Testimonial Block -->
-					<div class="testimonial-block">
+
+                    <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
 								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
 							</div>
-							<span class="quote-icon flaticon-quote-1"></span>
-							<div class="text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil rentoa molestiae conseruatur vela illum qui dolorem eum fugiat ruo voluetas nulla ariatur minima veniam.</div>
-							<div class="name">Sujiwo</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Drs. Sukiman, M.Si </div>
+							<div class="text">Sekretaris Dinas Kepemudaan Olahraga dan Pariwisata Kubu Raya</div>
 						</div>
 					</div>
-					
-					<!-- Testimonial Block -->
-					<div class="testimonial-block">
+
+                    <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
 								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
 							</div>
-							<span class="quote-icon flaticon-quote-1"></span>
-							<div class="text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil rentoa molestiae conseruatur vela illum qui dolorem eum fugiat ruo voluetas nulla ariatur minima veniam.</div>
-							<div class="name">Yusran Anizam</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Dra. Emmy Sulvaningsih </div>
+							<div class="text">Kasubbag Rencana Kerja dan Keuangan</div>
 						</div>
 					</div>
+
+                    <div class="testimonial-block">
+						<div class="inner-box">
+							<div class="author-image">
+								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+							</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Siti Zahara, S.Pd</div>
+							<div class="text">Kasubbag Tata Usaha dan Kepegawaian</div>
+						</div>
+					</div>
+
+                    <div class="testimonial-block">
+						<div class="inner-box">
+							<div class="author-image">
+								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+							</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">M. Renniyana B. Hasugian, S.Pd</div>
+							<div class="text">Kasubbag Perlengkapan dan Umum</div>
+						</div>
+					</div>
+
+                    <div class="testimonial-block">
+						<div class="inner-box">
+							<div class="author-image">
+								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+							</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Anwar, S.Sos, M.Si</div>
+							<div class="text">Kabid Kepemudaan</div>
+						</div>
+					</div>
+
+                    <div class="testimonial-block">
+						<div class="inner-box">
+							<div class="author-image">
+								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+							</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Isamuddin, S.Sos</div>
+							<div class="text">Kabid Keolahragaan</div>
+						</div>
+					</div>
+
+                    <div class="testimonial-block">
+						<div class="inner-box">
+							<div class="author-image">
+								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+							</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Darfiansyah, SKM, M.Si</div>
+							<div class="text">Kabid Pariwisata</div>
+						</div>
+					</div>
+
+                    <div class="testimonial-block">
+						<div class="inner-box">
+							<div class="author-image">
+								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+							</div>
+							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
+							<div class="name">Sri Yuli utami, SE, MM</div>
+							<div class="text">Kabid Ekonomi Kreatif</div>
+						</div>
+					</div>
+					
 					
 				</div>
 			</div>
@@ -354,6 +419,7 @@
 						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/koni.png" alt=""></a></figure></li>
 						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/ppi.png" alt=""></a></figure></li>
 						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/bapedda.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://bnn.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/bnn.png" alt=""></a></figure></li>
 					</ul>
 				</div>
 			</div>

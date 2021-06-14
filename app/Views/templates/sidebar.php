@@ -94,6 +94,13 @@
         </a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('admin/b-category') ?>">
+            <i class="far fa-newspaper"></i>
+                <span>Kategori</span>
+        </a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
     <li class="nav-item">

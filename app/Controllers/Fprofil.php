@@ -35,4 +35,12 @@ class FProfil extends BaseController
 		$data['bannerTitle'] = "Struktur Organisasi" ;
 		return view('frontend/templates/profil/struktur', $data);
 	}
+
+	public function sambutankadis()
+	{
+        $data['active'] = "current";
+        $data['title'] = "Sambutan KADIS";
+		$data['bannerTitle'] = "Sambutan KADIS" ;
+		return view('frontend/templates/profil/sambutan-kadis', $data);
+	}
 }

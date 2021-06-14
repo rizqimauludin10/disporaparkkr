@@ -13,6 +13,7 @@ class BeritaModel extends Model{
 
     protected $allowedFields = [
         'user_name',
+        'news_slug',
         'news_title',
         'news_desc',
         'news_image',

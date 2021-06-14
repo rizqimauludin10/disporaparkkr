@@ -16,6 +16,7 @@
         <div class="modal-body">
             <div class="form-group row">
                 <label for="name_news" class="col-sm-3 col-form-label">Judul Berita</label>
+                <input type="text" class="form-control" id="id" name="id" value="<?= user()->username;?>" hidden>
                 <div class="col-sm-9">
                 <input type="text" class="form-control" id="name_news" name="name_news">
                 <div class="invalid-feedback errorNewstitle"></div>
@@ -26,14 +27,14 @@
                 <label for="name_poster" class="col-sm-3 col-form-label">Isi Berita</label>
                 <div class="col-sm-9">
                     <textarea name="editor" id="editor" cols="30" rows="10" > </textarea>
-                    <!-- <div class="invalid-feedback errorNewsdesc"></div> -->
+                    <div class="invalid-feedback errorNewsdesc"></div>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label for="date_poster" class="col-sm-3 col-form-label">Tanggal</label>
                 <div class="col-sm-3">
-                <input type="date" class="form-control" id="date_news" name="date_news">
+                <input type="date" class="form-control" id="date_news" name="date_news" placeholder="dd-mm-yyyy" min="1997-01-01" max="2030-12-31">
                 <div class="invalid-feedback errorNewsdate"></div>
                 </div>
             </div>
@@ -74,6 +75,7 @@
 <script src="<?= base_url('ckeditor/ckeditor.js') ?>"></script>
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url(''); ?>/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -81,85 +83,85 @@
 
 CKEDITOR.replace('editor');
 
-console.log("Berita Input")
 $(document).ready(function() {
+    console.log("Berita Input")
     $('.btnUpload').click(function(e) {
     e.preventDefault();
 
     let form = $('.form_beritaInput')[0];
     let data = new FormData(form);
+    data.append('editor', CKEDITOR.instances['editor'].getData());
 
     $.ajax({
-            type: "post",
-            url: "<?= site_url('berita/storeData') ?>",
-            data: data,
-            enctype : 'multipart/form-data',
-            processData : false,
-            contentType : false,
-            cache: false,
-            dataType: "json",
-            beforeSend : function(e) {
+        type : "post",
+        url : "<?= site_url('berita/storeData') ?>",
+        data : data,
+        enctype : 'multipart/form-data',
+        processData : false,
+        contentType : false,
+        cache : false,
+        dataType : "json",
+        beforeSend : function(e) {
                 $('.btnUpload').prop('disable', 'disabled');
                 $('.btnUpload').html('<i class="fa fa-spin fa-spinner"></i>');
-            },
-            complete : function(e){
-                $('.btnUpload').removeAttr('disabled');
-                $('.btnUpload').html('Upload');
-            },
-            success : function (response) {
-                if(response.error) {
-                    if(response.error.namenews) {
-                        $('#name_news').addClass('is-invalid');
-                        $('.errorNewstitle').html(response.error.namenews);
-                    } else {
-                        $('#name_news').removeClass('is-invalid');
-                        $('.errorNewstitle').html('');
-                    }
+        },
+        
+        complete : function(e){
+            $('.btnUpload').removeAttr('disabled');
+            $('.btnUpload').html('Upload');
+        },
 
-                    if(response.error.editor) {
-                        $('#editor').addClass('is-invalid');
-                        $('.errorNewsdesc').html(response.error.editor);
-                    } else {
-                        $('#editor').removeClass('is-invalid');
-                        $('.errorNewsdesc').html('');
-                    }
-
-                    if(response.error.datenews) {
-                        $('#date_news').addClass('is-invalid');
-                        $('.errorNewsdate').html(response.error.datenews);
-                    } else {
-                        $('#date_news').removeClass('is-invalid');
-                        $('.errorNewsdate').html('');
-                    }
-
-                    if(response.error.image_news) {
-                        $('#image_news').addClass('is-invalid');
-                        $('.errorNewsimage').html(response.error.image_news);
-                    } else {
-                        $('#image_news').removeClass('is-invalid');
-                        $('.errorNewsimage').html('');
-                    }
+        success : function (response) {
+            if(response.error) {
+                if(response.error.namenews){
+                    $('#name_news').addClass('is-invalid');
+                    $('.errorNewstitle').html(response.error.namenews);
                 } else {
-                    console.log("Akhir")
-                    Swal.fire({
+                    $('#name_news').removeClass('is-invalid');
+                    $('.errorNewstitle').html('');
+                }
+
+                if(response.error.editor){
+                    $('#editor').addClass('is-invalid');
+                    $('.errorNewsdesc').html(response.error.editor);
+                } else {
+                    $('#editor').removeClass('is-invalid');
+                    $('.errorNewsdesc').html('');
+                }
+
+                if(response.error.datenews){
+                    $('#date_news').addClass('is-invalid');
+                    $('.errorNewsdate').html(response.error.datenews);
+                } else {
+                    $('#date_news').removeClass('is-invalid');
+                    $('.errorNewsdate').html('');
+                }
+
+                if(response.error.image_news){
+                    $('#image_news').addClass('is-invalid');
+                    $('.errorNewsimage').html(response.error.image_news);
+                } else {
+                    $('#image_news').removeClass('is-invalid');
+                    $('.errorNewsimage').html('');
+                }
+
+            } else {
+                Swal.fire({
                         icon: 'success',
                         title: 'Berhasil',
                         text: response.sukses,
-                    })
-                    
-        
-                    $('#berita_tambah').modal('hide');
-                    console.log("Sukses")
-                    dataBerita();
-                }
-            },
-            error: function(xhr, ajaxOptions, thrownError) {
+                })
+
+                $('#berita_tambah').modal('hide');
+                dataBerita();
+            }
+        },
+
+        error: function(xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
             }
-        });
-    
     });
 });
-
+});
 
 </script>

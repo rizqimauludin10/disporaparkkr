@@ -37,12 +37,12 @@
                     <div class="row clearfix">
                         <div class="col-lg-10 col-md-12 col-sm-12 offset-lg-2 content-column">
                             <div class="inner-column">
-                                <div class="title">Counsel LAw Firm</div>
-                                <h1>Best LAw Firm <br> Since 1968</h1>
-                                <div class="text">Quis autem velo eum iure reprehenderit rui in ea voluatacera suam nihil molestiae conseuatur vel illum.</div>
-                                <div class="btns-box">
+                                <div class="title"></div>
+                                <h1>Title <br> Sub Title</h1>
+                                <div class="text">caption</div>
+                                <!-- <div class="btns-box">
                                     <a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Free Consultation <i class="arrow flaticon-right"></i></span></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>   

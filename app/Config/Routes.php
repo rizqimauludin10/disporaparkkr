@@ -33,17 +33,24 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->get('/', 'User::index');
+// $routes->get('/', 'Home::index');
+$routes->get('/', 'Fberanda::index');
 $routes->get('/beranda', 'Fberanda::index');
 $routes->get('/profil-instansi', 'Fprofil::index');
 $routes->get('/visi-misi', 'Fprofil::visimisi');
 $routes->get('/tupoksi', 'Fprofil::tupoksi');
 $routes->get('/maklumat-pelayanan', 'Flayanan::index');
+$routes->get('/standar-pelayanan', 'Flayanan::standarpelayanan');
+$routes->get('/motto-pelayanan', 'Flayanan::mottopelayanan');
+$routes->get('/tdup', 'Flayanan::tdup');
+$routes->get('/e-lapor', 'Flayanan::lapor');
 $routes->get('/struktur-organisasi', 'Fprofil::struktur');
+$routes->get('/sambutan-kadis', 'Fprofil::sambutankadis');
 $routes->get('/contact', 'Fcontact::index');
 $routes->get('/berita', 'Fberita::index');
 
 $routes->get('/admin/b-berita', 'berita::index');
+$routes->get('/admin/b-category', 'category::index');
 
 $routes->get('/userlist', 'Admin::userlist', ['filter' => 'role:admin'] );
 $routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);

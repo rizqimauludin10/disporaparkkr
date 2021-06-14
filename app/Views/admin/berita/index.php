@@ -44,16 +44,16 @@
 
 function dataBerita() {
     console.log("Berita Get Data")
-  $.ajax({
-    url : "<?= site_url('berita/getdata') ?>",
-    dataType : "json",
-    success: function(response) {
-      $('.viewdata').html(response.data);
-    },
-    error: function(xhr, ajaxOptions, thrownError) {
-      alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
-    }
-  });
+    $.ajax({
+      url : "<?= site_url('berita/getdata') ?>",
+      dataType : "json",
+      success: function(response) {
+        $('.viewdata').html(response.data);
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+        alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+      }
+    });
 }
 
 $(document).ready(function(){

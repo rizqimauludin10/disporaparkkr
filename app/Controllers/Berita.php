@@ -26,17 +26,13 @@ class Berita extends BaseController
 			$data = [
 				'data_berita' => $berita->findAll()
 			];
-
 			$msg = [
 				'data' => view('admin/berita/berita_data', $data)
 			];
-
-
 			echo json_encode($msg);
 		} else {
 			exit('Maaf');
 		}
-
     }
 
 	public function formAddData() {
@@ -63,7 +59,7 @@ class Berita extends BaseController
 	public function storeData() {
 		helper('form');
 		if($this->request->isAjax()) {
-
+			
 			$validation =  \Config\Services::validation();
 
 			$valid = $this->validate([
@@ -74,6 +70,7 @@ class Berita extends BaseController
 						'required' => '{field} tidak boleh kosong'
 						]
 					],
+
 					'editor' => [
 						'label' => 'Isi Berita',
 						'rules' => 'required',
@@ -111,32 +108,51 @@ class Berita extends BaseController
 					];
 
 					} else {
+
 						$image = $this->request->getFile('image_news');
                         $img = $this->request->getVar('name_news');
                         $image->move('assets/news-image', $img . '.' . $image->getExtension());
 
 						$saveData = [
-							'user_name' => user()->username,
+							'user_name' => $this->request->getVar('id'),
 							'news_title' => $this->request->getVar('name_news'),
+							'news_slug' => url_title($this->request->getVar('name_news'), '-', TRUE), 
 							'news_desc' => $this->request->getVar('editor'),
 							'news_tanggal' => $this->request->getVar('date_news'),
 							'news_bidang' => $this->request->getVar('bidang_news'),
 							'news_image' => './assets/news-image/' . $image->getName()
-							
 						];
 
-						$news = new BeritaModel;
-
-						$news->insert($saveData);
+						$berita = new BeritaModel();
+						$berita->insert($saveData);
 
 						$msg = [
 							'sukses' => 'Data news berhasil tersimpan'
 						];
 					}
-
 					echo json_encode($msg);
 			} else {
 				exit("Gagal input data");
 			}
+	}
+
+
+	public function deleteData() {
+		if($this->request->isAjax()) {
+			$id = $this->request->getVar('id');
+
+			$berita = new BeritaModel();
+			$check = $berita->find($id);
+			$oldImage = $check['news_image'];
+			unlink($oldImage);
+
+			$berita->delete($id);
+
+			$msg = [
+				'sukses' => 'Data news berhasil dihapus'
+			];
+
+			echo json_encode($msg);
 		}
+	}
 }

@@ -5,7 +5,7 @@
         	<div class="auto-container clearfix">
             	
 				<div class="pull-left logo-box">
-					<div class="logo"><a href="index.html"><img src="<?= base_url(); ?>/frontend/images/logo-footer.png" alt="" title=""></a></div>
+					<div class="logo"><a href="/beranda"><img src="<?= base_url(); ?>/frontend/images/logo-footer.png" alt="" title=""></a></div>
 				</div>
 				
 				<div class="nav-outer clearfix">
@@ -27,13 +27,13 @@
                                 <li><a href="<?= base_url('/beranda') ?>">Beranda</a></li>
                                 <?php $request = \Config\Services::request(); ?>
                                
-                                <li <?= $request->uri->getSegment(1) == 'profil-instansi' || $request->uri->getSegment(1) == 'visi-misi' || $request->uri->getSegment(1) == 'struktur-organisasi' || $request->uri->getSegment(1) == 'tupoksi'  ? 'class = "current dropdown"' : '' ?>><a href="#">Profil</a>
+                                <li <?= $request->uri->getSegment(1) == 'profil-instansi' || $request->uri->getSegment(1) == 'visi-misi' || $request->uri->getSegment(1) == 'struktur-organisasi' || $request->uri->getSegment(1) == 'tupoksi' || $request->uri->getSegment(1) == 'sambutan-kadis' ? 'class = "current dropdown"' : '' ?> class="dropdown"><a href="#">Profil</a>
                                     <ul>
+                                        <li><a href="<?= base_url('/sambutan-kadis') ?>">Sambutan Kadis</a></li>
                                         <li><a href="<?= base_url('/profil-instansi') ?>">Profil Instansi</a></li>
                                         <li><a href="<?= base_url('/visi-misi') ?>">Visi dan Misi</a></li>
                                         <li><a href="<?= base_url('/struktur-organisasi') ?>">Struktur Organisasi</a></li>
                                         <li><a href="<?= base_url('/tupoksi') ?>">Tupoksi</a></li>
-                                        <li><a href="#">SOP</a></li>
                                         <li><a href="#">Sumber Daya Aparatur</a></li>
                                     </ul>
                                 </li>
@@ -46,6 +46,7 @@
 								    </ul>
 								</li>
                                 <li <?= $request->uri->getSegment(1) == 'berita' ? 'class = "current"' : '' ?>><a href="<?= base_url('/berita') ?>">Berita</a>
+                                <li class=""><a href="<?= base_url('/unduhan') ?>">Unduhan</a></li>
                                 <li><a href="#">Event</a></li>
 								<li class="dropdown"><a href="#">Galeri</a>
 									<ul>
@@ -53,14 +54,15 @@
                                         <li><a href="blog-detail.html">Galeri Video</a></li>
 								    </ul>
 								</li>
-                                <li <?= $request->uri->getSegment(1) == 'maklumat-pelayanan' ? 'class = "current dropdown"' : '' ?>><a href="#">Layanan</a>
+                                <li <?= $request->uri->getSegment(1) == 'maklumat-pelayanan' || $request->uri->getSegment(1) == 'standar-pelayanan' || $request->uri->getSegment(1) == 'motto-pelayanan' || $request->uri->getSegment(1) == 'e-lapor' ? 'class = "current dropdown"' : '' ?> class="dropdown" ><a href="#" >Layanan</a>
 									<ul>
-                                        <li><a href="<?= base_url('maklumat-pelayanan') ?>">MOTTO PELAYANAN</a></li>
+                                        <li><a href="<?= base_url('standar-pelayanan') ?>">STANDAR PELAYANAN</a></li>
+                                        <li><a href="<?= base_url('motto-pelayanan') ?>">MOTTO PELAYANAN</a></li>
                                         <li><a href="<?= base_url('maklumat-pelayanan') ?>">MAKLUMAT PELAYANAN</a></li>
-                                        <li><a href="#">E-LAPOR</a></li>
-										<li><a href="blog.html">TDUP</a></li>
-                                        <li><a href="blog-detail.html">POKDARWIS</a></li>
-                                        <li><a href="#">PENGADUAN</a></li>
+                                        <li><a href="#">SOP</a></li>
+                                        <li><a href="<?= base_url('e-lapor') ?>">E-LAPOR</a></li>
+										<li><a href="#">TDUP</a></li>
+                                        <li><a href="#">POKDARWIS</a></li>
 								    </ul>
 								</li>
                             </ul>
@@ -87,7 +89,7 @@
             <div class="auto-container clearfix">
                 <!--Logo-->
                 <div class="logo pull-left">
-                    <a href="index.html" title=""><img src="<?= base_url(); ?>/frontend/images/logo2.png" alt="" title=""></a>
+                    <a href="/beranda" title=""><img src="<?= base_url(); ?>/frontend/images/logo2.png" alt="" title=""></a>
                 </div>
                 <!--Right Col-->
                 <div class="pull-right">
@@ -100,9 +102,9 @@
 					<div class="outer-box clearfix">
 						
 						<!-- Btn Box -->
-						<div class="btn-box">
+						<!-- <div class="btn-box">
 							<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Hubungi Kami</span></a>
-						</div>
+						</div> -->
 						
 						<!-- Mobile Navigation Toggler -->
 						<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>

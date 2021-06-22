@@ -136,6 +136,58 @@ class Berita extends BaseController
 			}
 	}
 
+	public function beritaEdit() {
+		helper('form');
+		if($this->request->isAjax()){
+			$id = $this->request->getVar('id');
+
+			$berita = new BeritaModel();
+			$bidang = new BidangModel();
+			$row = $berita->find($id);
+
+			$data = [
+				'id' => $row['id'],
+				'news_title' => $row['news_title'],
+				'news_desc' => $row['news_desc'],
+				'news_tanggal' => $row['news_tanggal'],
+				'data_bidang' => $bidang->findAll()
+			];
+
+			$msg = [
+				'sukses' => view('admin/berita/berita_edit', $data),
+			];
+
+		echo json_encode($msg);
+
+		}
+	}
+
+
+	public function editData(){
+		if($this->request->isAjax()) {
+			$updateData = [
+				'news_title' => $this->request->getVar('name_news'),
+				'news_slug' => url_title($this->request->getVar('name_news'), '-', TRUE), 
+				'news_desc' => $this->request->getVar('editor'),
+				'news_tanggal' => $this->request->getVar('date_news'),
+			];
+
+			$berita = new BeritaModel();
+
+			$id = $this->request->getVar('id');
+			$berita->update($id, $updateData);
+
+			$msg = [
+					'sukses' => 'Data berita berhasil diupdate'
+			];
+				
+			echo json_encode($msg);
+			
+		} else {
+			exit('Maaf gagal diupdate');
+		}
+	}
+
 
 	public function deleteData() {
 		if($this->request->isAjax()) {

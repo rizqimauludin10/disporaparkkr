@@ -57,7 +57,7 @@
 										</li>
 										<li>
 											<span class="icon flaticon-email-2"></span>
-											<a href="mailto:disporaparkkr@gmail.com">disporaparkkr@gmail.com</a>
+											<a href="mailto:disporaparkkr@gmail.com">disporapar@kuburayakab.go.id</a>
 										</li>
 										<li>
 											<span class="icon flaticon-maps-and-flags"></span>

@@ -226,7 +226,7 @@
     <!-- None end -->
     
     <!-- Data Kunjungan -->
-    <section class="facts-section-three" style="background-image: url(frontend/images/background/1.jpg);">
+    <section class="facts-section-three" style="background-image: url(frontend/images/background/tt.png);">
         
         <div class="auto-container">
             <div class="fact-counter-style-three">
@@ -281,7 +281,7 @@
         </div>
     </section>   
 	
-	<!-- Testimonail Section -->
+	<!-- Pejabat Section -->
 	<section class="testimonial-section" style="background-image: url(frontend/images/background/pattern-3.png)">
 		<div class="auto-container">
 			<!-- Sec Title -->
@@ -306,7 +306,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-2.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Drs. Sukiman, M.Si </div>
@@ -317,7 +317,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-3.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Dra. Emmy Sulvaningsih </div>
@@ -328,7 +328,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-4.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Siti Zahara, S.Pd</div>
@@ -339,7 +339,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-5.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">M. Renniyana B. Hasugian, S.Pd</div>
@@ -350,7 +350,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-6.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Anwar, S.Sos, M.Si</div>
@@ -361,7 +361,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-7.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Isamuddin, S.Sos</div>
@@ -372,7 +372,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-8.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Darfiansyah, SKM, M.Si</div>
@@ -383,7 +383,7 @@
                     <div class="testimonial-block">
 						<div class="inner-box">
 							<div class="author-image">
-								<img src="<?= base_url() ?>/frontend/images/resource/author-1.png" alt="" />
+								<img src="<?= base_url() ?>/frontend/images/resource/author-9.png" alt="" />
 							</div>
 							<!-- <span class="quote-icon flaticon-quote-1"></span> -->
 							<div class="name">Sri Yuli utami, SE, MM</div>
@@ -411,14 +411,13 @@
 					<!--Sponsors Carousel-->
 					<ul class="sponsors-carousel owl-carousel owl-theme">
 						<li class="slide-item"><figure class="image-box"><a href="https://kuburayakab.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/kuburayakab.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/dispora-kalbar.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/bekraf.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/pola.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/ombusman.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/kemenpora.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/koni.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/ppi.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/bapedda.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://disporapar.kalbarprov.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/dispora-kalbar.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://kemenparekraf.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/pola.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://ombudsman.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/ombusman.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://www.kemenpora.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/kemenpora.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://koni.or.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/koni.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="#" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/ppi.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://bappeda.kuburayakab.go.id/home" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/bapedda.png" alt=""></a></figure></li>
 						<li class="slide-item"><figure class="image-box"><a href="https://bnn.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/bnn.png" alt=""></a></figure></li>
 					</ul>
 				</div>

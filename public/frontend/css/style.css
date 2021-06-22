@@ -468,7 +468,7 @@ img{
 	color:#e1a122;
 }
 
-.preloader{ position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:999999; background-color:#ffffff; background-position:center center; background-repeat:no-repeat; background-image:url(../images/icons/preloader.svg); background-size:80px; }
+.preloader{ position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:999999; background-color:#ffffff; background-position:center center; background-repeat:no-repeat; background-image:url(../images/icons/preloader_1.svg); background-size:80px; }
 
 img{
 	display:inline-block;
@@ -984,7 +984,7 @@ img{
 	visibility:visible;
 	opacity:1;
 	top:0;
-	left:100%;
+	left:-120%;
 	-moz-transform: rotateX(0deg);
 	-webkit-transform: rotateX(0deg);
 	-ms-transform: rotateX(0deg);
@@ -2815,8 +2815,8 @@ img{
 
 .testimonial-block .inner-box .author-image{
 	position:relative;
-	width:117px;
-	height:117px;
+	width:200px;
+	height:200px;
 	margin:0 auto;
 	overflow:hidden;
 	margin-bottom:25px;

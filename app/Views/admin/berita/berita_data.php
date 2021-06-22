@@ -53,7 +53,7 @@
 
                     <button type="button" class="btn btn-success btn-sm" onClick="edit('<?= $berita['id'] ?>')"> <i class="far fa-eye"></i> </button>
 
-                    <button type="button" class="btn btn-warning btn-sm" onClick="edit('<?= $berita['id'] ?>')"> <i class="far fa-edit"></i> </button>
+                    <button type="button" class="btn btn-warning btn-sm" onClick="editData('<?= $berita['id'] ?>')"> <i class="far fa-edit"></i> </button>
 
                     <button type="button" class="btn btn-danger btn-sm" onClick="deleteData('<?= $berita['id'] ?>')"> <i class="far fa-trash-alt"></i> </button>
 
@@ -69,6 +69,26 @@
     $(document).ready(function () {
         $('#dataBerita').DataTable();
     });
+
+    function editData(id) {
+        $.ajax({
+            type: "post",
+            url: "<?= site_url('berita/beritaEdit') ?>",
+            data: {
+                id : id
+            },
+            dataType: "json",
+            success: function(response) {
+                if(response.sukses) {
+                    $('.viewmodal').html(response.sukses).show();
+                    $('#berita_edit').modal('show');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+            }
+        });
+    }
 
 
 

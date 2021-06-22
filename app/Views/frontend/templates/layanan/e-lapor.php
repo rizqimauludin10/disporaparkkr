@@ -26,7 +26,11 @@
 		<div class="auto-container">
 			<div class="inner-container">
 				<div class="image p-5">
-					    <img src="<?= base_url(); ?>/frontend/images/resource/sp4n-lapor.png" alt="Motto Pelayanan Disporapar Kubu Raya" />
+					    <img src="<?= base_url(); ?>/frontend/images/resource/sp4n-lapor.png" alt="SPAN LAPOR"/>
+						<div class="sec-title">
+							<div class="text"> <b>  Berikut link terkait ke laman <a href="https://www.lapor.go.id/" target="_blank">E-Lapor</a> <p>Biaya atau Tarif Pelayanan GRATIS</p> </b> 
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>

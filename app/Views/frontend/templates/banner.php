@@ -7,7 +7,7 @@
 		</ul>
         <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
             <div class="slide-item">
-                <div class="image-layer" style="background-image:url(frontend/images/main-slider/banner-2.jpg)"></div>
+                <div class="image-layer" style="background-image:url(frontend/images/main-slider/banner-2_new.jpg)"></div>
                 <div class="pattern-layer">
                     <div class="pattern-3" style="background-image: url(frontend/images/shape/pattern-28.png);"></div>
                     <div class="pattern-4" style="background-image: url(frontend/images/shape/pattern-29.png);"></div>
@@ -20,7 +20,7 @@
                                 <h1>DISPORAPAR<br>Kubu Raya</h1>
                                 <div class="text">Dinas Kepemudaan Olahraga dan Pariwisata Kabupaten Kubu Raya</div>
                                 <div class="btns-box">
-                                    <a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Selengkapnya<i class="arrow flaticon-right"></i></span></a>
+                                    <a href="<?= base_url('/contact') ?>" class="theme-btn btn-style-one"><span class="txt">Selengkapnya<i class="arrow flaticon-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="slide-item">
-                <div class="image-layer" style="background-image:url(frontend/images/main-slider/banner-1.jpg)"></div>
+                <div class="image-layer" style="background-image:url(frontend/images/main-slider/banner-1_new.jpg)"></div>
                 <div class="pattern-layer">
                     <div class="pattern-3" style="background-image: url(frontend/images/shape/pattern-28.png);"></div>
                     <div class="pattern-4" style="background-image: url(frontend/images/shape/pattern-29.png);"></div>
@@ -37,12 +37,12 @@
                     <div class="row clearfix">
                         <div class="col-lg-10 col-md-12 col-sm-12 offset-lg-2 content-column">
                             <div class="inner-column">
-                                <div class="title"></div>
-                                <h1>Title <br> Sub Title</h1>
-                                <div class="text">caption</div>
-                                <!-- <div class="btns-box">
-                                    <a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Free Consultation <i class="arrow flaticon-right"></i></span></a>
-                                </div> -->
+                            <div class="title">SELAMAT DATANG</div>
+                                <h1>DISPORAPAR<br>Kubu Raya</h1>
+                                <div class="text">Dinas Kepemudaan Olahraga dan Pariwisata Kabupaten Kubu Raya</div>
+                                <div class="btns-box">
+                                    <a href="<?= base_url('/contact') ?>" class="theme-btn btn-style-one"><span class="txt">Selengkapnya<i class="arrow flaticon-right"></i></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>   

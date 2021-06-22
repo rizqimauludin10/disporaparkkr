@@ -39,13 +39,19 @@
                                 </li>
                                 <li class="dropdown"><a href="#">Bidang</a>
 									<ul>
-										<li><a href="blog.html">Kepemudaan</a></li>
-                                        <li><a href="blog-detail.html">Olahraga</a></li>
-                                        <li><a href="blog-detail.html">Pariwisata</a></li>
-                                        <li><a href="blog-detail.html">Ekonomi Kreatif</a></li>
+										<li><a href="#">Kepemudaan</a></li>
+                                        <li><a href="#">Olahraga</a></li>
+                                        <li><a href="#">Pariwisata</a></li>
+                                        <li><a href="#">Ekonomi Kreatif</a></li>
 								    </ul>
 								</li>
-                                <li <?= $request->uri->getSegment(1) == 'berita' ? 'class = "current"' : '' ?>><a href="<?= base_url('/berita') ?>">Berita</a>
+
+                                <li <?= $request->uri->getSegment(1) == 'berita' || $request->uri->getSegment(1) == 'pengumuman' ? 'class = "current dropdown"' : '' ?> class="dropdown" ><a href="#" >Informasi</a>
+									<ul>
+										<li><a href="<?= base_url('/berita') ?>">Berita</a></li>
+                                        <li><a href="#">Pengumuman</a></li>
+								    </ul>
+								</li>
                                 <li class=""><a href="<?= base_url('/unduhan') ?>">Unduhan</a></li>
                                 <li><a href="#">Event</a></li>
 								<li class="dropdown"><a href="#">Galeri</a>
@@ -54,15 +60,20 @@
                                         <li><a href="blog-detail.html">Galeri Video</a></li>
 								    </ul>
 								</li>
-                                <li <?= $request->uri->getSegment(1) == 'maklumat-pelayanan' || $request->uri->getSegment(1) == 'standar-pelayanan' || $request->uri->getSegment(1) == 'motto-pelayanan' || $request->uri->getSegment(1) == 'e-lapor' ? 'class = "current dropdown"' : '' ?> class="dropdown" ><a href="#" >Layanan</a>
+                                <li <?= $request->uri->getSegment(1) == 'maklumat-pelayanan' || $request->uri->getSegment(1) == 'standar-pelayanan' || $request->uri->getSegment(1) == 'motto-pelayanan' || $request->uri->getSegment(1) == 'e-lapor' || $request->uri->getSegment(1) == 'tdup' || $request->uri->getSegment(1) == 'pokdarwis' ? 'class = "current dropdown"' : '' ?> class="dropdown" ><a href="#" >Layanan</a>
 									<ul>
-                                        <li><a href="<?= base_url('standar-pelayanan') ?>">STANDAR PELAYANAN</a></li>
-                                        <li><a href="<?= base_url('motto-pelayanan') ?>">MOTTO PELAYANAN</a></li>
-                                        <li><a href="<?= base_url('maklumat-pelayanan') ?>">MAKLUMAT PELAYANAN</a></li>
+                                        <li><a href="<?= base_url('standar-pelayanan') ?>">STANDAR LAYANAN</a></li>
+                                        <li><a href="<?= base_url('motto-pelayanan') ?>">MOTTO LAYANAN</a></li>
+                                        <li><a href="<?= base_url('maklumat-pelayanan') ?>">MAKLUMAT LAYANAN</a></li>
                                         <li><a href="#">SOP</a></li>
-                                        <li><a href="<?= base_url('e-lapor') ?>">E-LAPOR</a></li>
-										<li><a href="#">TDUP</a></li>
-                                        <li><a href="#">POKDARWIS</a></li>
+                                        <li class="dropdown"><a href="#">Produk Layanan</a>
+                                            <ul>
+                                                <li><a href="<?= base_url('tdup') ?>">TDUP</a></li>
+                                                <li><a href="<?= base_url('pokdarwis') ?>">POKDARWIS</a></li>
+                                                <li><a href="<?= base_url('e-lapor') ?>">Aduan</a></li>
+                                                <li><a href="#">IKM</a></li>
+                                            </ul>
+                                        </li>
 								    </ul>
 								</li>
                             </ul>

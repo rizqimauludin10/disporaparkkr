@@ -43,4 +43,12 @@ class FLayanan extends BaseController
 		$data['bannerTitle'] = "E-Lapor" ;
 		return view('frontend/templates/layanan/e-lapor', $data);
 	}
+
+	public function pokdarwis()
+	{
+        $data['active'] = "current";
+        $data['title'] = "Pokdarwis";
+		$data['bannerTitle'] = "Pokdarwis" ;
+		return view('frontend/templates/layanan/pokdarwis', $data);
+	}
 }

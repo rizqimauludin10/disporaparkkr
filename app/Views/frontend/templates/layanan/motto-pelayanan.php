@@ -26,7 +26,7 @@
 		<div class="auto-container">
 			<div class="inner-container">
 				<div class="image p-5">
-					    <img src="<?= base_url(); ?>/frontend/images/resource/moto-pelayanan.jpg" alt="Motto Pelayanan Disporapar Kubu Raya" />
+					    <img src="<?= base_url(); ?>/frontend/images/resource/motto-layanan.jpg" alt="Motto Pelayanan Disporapar Kubu Raya" />
 				</div>
 			</div>
 		</div>

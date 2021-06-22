@@ -44,6 +44,7 @@ $routes->get('/standar-pelayanan', 'Flayanan::standarpelayanan');
 $routes->get('/motto-pelayanan', 'Flayanan::mottopelayanan');
 $routes->get('/tdup', 'Flayanan::tdup');
 $routes->get('/e-lapor', 'Flayanan::lapor');
+$routes->get('/pokdarwis', 'Flayanan::pokdarwis');
 $routes->get('/struktur-organisasi', 'Fprofil::struktur');
 $routes->get('/sambutan-kadis', 'Fprofil::sambutankadis');
 $routes->get('/contact', 'Fcontact::index');

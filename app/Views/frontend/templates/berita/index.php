@@ -38,15 +38,14 @@
 									<div class="category">Law</div>
 									<ul class="post-meta">
 										<li><a href="blog-detail.html"><span class="icon flaticon-timetable"></span>August 25, 2021</a></li>
-										<li><a href="blog-detail.html"><span class="icon flaticon-email"></span>Comments 03</a></li>
 										<li><a href="blog-detail.html"><span class="icon flaticon-user-2"></span>Admin</a></li>
 									</ul>
 								</div>
 								<div class="lower-content">
-									<h3><a href="blog-detail.html">Creative Para Jóvenes: Designer’s UI/UX Complete Checklist.</a></h3>
+									<h3><a href="blog-detail.html">Lorem Ipsum</a></h3>
 									<div class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </div>
 									<div class="btn-box">
-										<a href="blog-detail.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
+										<a href="blog-detail.html" class="theme-btn btn-style-two"><span class="txt">Baca Selengkapnya</span></a>
 									</div>
 								</div>
 							</div>
@@ -86,11 +85,11 @@
 							<div class="sidebar-widget sidebar-blog-category">
 								<div class="widget-content">
 									<div class="sidebar-title">
-										<h5>Categories</h5>
+										<h5>Kategori</h5>
 									</div>
 									<ul class="cat-list-two">
-										<li><a href="#">Consulting <span>(25)</span></a></li>
-										<li><a href="#">Life Style<span>(80)</span></a></li>
+										<li><a href="#">Kepemudaan <span>(25)</span></a></li>
+										<li><a href="#">Olahraga<span>(80)</span></a></li>
 										<li><a href="#">Technology<span>(95)</span></a></li>
 									</ul>
 								</div>

@@ -47,10 +47,6 @@
 								<b>Dinas Kepemudaan Olahraga dan Pariwisata terdiri dari bidang Kepemudaan, Olahraga, Pariwisata dan Ekonomi Kreatif.</b> 
 								</div>
 							</div>
-							<!-- <div class="text-box">
-								Nam libero tempore, cum soluta nobis est eligenioptio cumque nihil impedit quo minus id quod maxplaceat facere possimus, omnis voluptas.
-								<a href="corporate_law.html" class="arrow flaticon-right"></a>
-							</div> -->
 						</div>
 					</div>
 					

@@ -74,8 +74,8 @@
 						<div class="icon flaticon-email-3"></div>
 						<h5>Email</h5>
 						<ul class="info-list">
+							<li><a href="mailto:disporapar@kuburayakab.go.id">disporapar@kuburayakab.go.id</a></li>
 							<li><a href="mailto:disporaparkkr@gmail.com">disporaparkkr@gmail.com</a></li>
-							<li><a href="mailto:rizqimauludin10@gmail.com">pariwisatakkr@gmail.com</a></li>
 						</ul>
 					</div>
 				</div>
@@ -85,41 +85,33 @@
 	</section>
 	<!-- End Contact Info Section -->
 
-    <!-- Patner Kami -->
-	<section class="clients-section style-two">
+	<!-- Patner Kami -->
+	<section class="clients-section">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title centered">
-				<h2>Patner Kami</h2>
+				<h2>Link Terkait</h2>
 				
 			</div>
 			<div class="inner-container">
 				<div class="sponsors-outer">
 					<!--Sponsors Carousel-->
 					<ul class="sponsors-carousel owl-carousel owl-theme">
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/kuburayakab.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/dispora-kalbar.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/bekraf.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/pola.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/ombusman.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/kemenpora.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/koni.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/ppi.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="image-box"><a href="#"><img src="<?= base_url() ?>/frontend/images/clients/bapedda.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://kuburayakab.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/kuburayakab.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://disporapar.kalbarprov.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/dispora-kalbar.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://kemenparekraf.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/pola.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://ombudsman.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/ombusman.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://www.kemenpora.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/kemenpora.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://koni.or.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/koni.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="#" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/ppi.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://bappeda.kuburayakab.go.id/home" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/bapedda.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="image-box"><a href="https://bnn.go.id/" target="_blank"><img src="<?= base_url() ?>/frontend/images/clients/bnn.png" alt=""></a></figure></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Patner Kami end -->
-
-   
-	
-	<!-- Main Footer -->
-    <?= $this->include('frontend/templates/footer'); ?>
-	
-</div>
-<!--End pagewrapper-->
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>

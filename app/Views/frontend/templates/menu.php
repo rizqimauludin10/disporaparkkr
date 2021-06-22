@@ -5,7 +5,7 @@
                 <div class="top-left pull-left clearfix">
                     <ul class="info-box clearfix">
                         <li><i class="flaticon-headphones"></i><a href="$">0852 4567 2200</a></li>
-                        <li><i class="flaticon-email"></i><a href="mailto:disporaparkkr@gmail.com">disporaparkkr@gmail.com</a></li>
+                        <li><i class="flaticon-email"></i><a href="mailto:disporapar@kuburayakab.go.id">disporapar@kuburayakab.go.id</a></li>
                     </ul>
                 </div>
                 <div class="top-right pull-right clearfix">
@@ -64,7 +64,13 @@
                                         <li><a href="#">Sekretariat</a></li>
 								    </ul>
 								</li>
-                                <li class=""><a href="<?= base_url('/berita') ?>">Berita</a></li>
+
+                                <li class="dropdown"><a href="#">Informasi</a>
+									<ul>
+										<li><a href="<?= base_url('/berita') ?>">Berita</a></li>
+                                        <li><a href="#">Pengumuman</a></li>
+								    </ul>
+								</li>
                                 <li class=""><a href="<?= base_url('/unduhan') ?>">Unduhan</a></li>
                                 <li><a href="#">Event</a></li>
 								<li class="dropdown"><a href="#">Galeri</a>
@@ -75,12 +81,18 @@
 								</li>
 								<li class="dropdown"><a href="#">Layanan</a>
 									<ul>
-                                        <li><a href="<?= base_url('standar-pelayanan') ?>">STANDAR PELAYANAN</a></li>
-                                        <li><a href="<?= base_url('motto-pelayanan') ?>">MOTTO PELAYANAN</a></li>
-                                        <li><a href="<?= base_url('maklumat-pelayanan') ?>">MAKLUMAT PELAYANAN</a></li>
-                                        <li><a href="<?= base_url('e-lapor') ?>">E-LAPOR</a></li>
-										<li><a href="<?= base_url('tdup') ?>">TDUP</a></li>
-                                        <li><a href="blog-detail.html">POKDARWIS</a></li>
+                                        <li><a href="<?= base_url('standar-pelayanan') ?>">STANDAR LAYANAN</a></li>
+                                        <li><a href="<?= base_url('motto-pelayanan') ?>">MOTTO LAYANAN</a></li>
+                                        <li><a href="<?= base_url('maklumat-pelayanan') ?>">MAKLUMAT LAYANAN</a></li>
+                                        
+                                        <li class="dropdown"><a href="#">Produk Layanan</a>
+                                            <ul>
+                                                <li><a href="<?= base_url('tdup') ?>">TDUP</a></li>
+                                                <li><a href="<?= base_url('pokdarwis') ?>">POKDARWIS</a></li>
+                                                <li><a href="<?= base_url('e-lapor') ?>">Aduan</a></li>
+                                                <li><a href="#">IKM</a></li>
+                                            </ul>
+                                        </li>
 								    </ul>
 								</li>
                             </ul>
@@ -121,7 +133,7 @@
 						
 						<!-- Btn Box -->
 						<div class="btn-box">
-							<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Hubungi Kami</span></a>
+							<a href="<?= base_url('/contact') ?>" class="theme-btn btn-style-two"><span class="txt">Hubungi Kami</span></a>
 						</div>
 						
 						<!-- Mobile Navigation Toggler -->
